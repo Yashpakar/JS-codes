@@ -1,0 +1,76 @@
+String 1
+
+        var even = 0;
+        var odd = 0;
+        var nm = 0;
+        var newnum = 0;
+        var n = 673;
+
+        while(n!=0){
+            var lastdigit = n%10;
+            if(lastdigit%2==0){
+                even = (even*10)+lastdigit;
+           }else{
+                odd = (odd*10)+lastdigit;
+            }
+            newnum = (newnum*10)+lastdigit;
+            // n=n/10;
+            n = Math.floor(n / 10);
+        } 
+        console.log("The reversed number is " + newnum);
+       console.log("The odd num is" + odd);
+       console.log("The even num is" + even);
+       
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+String 2
+
+let totalASCII=0;
+const inputstring = "yash";
+
+for (let i = 0; i < inputstring.length; i++) {
+    const char = inputstring.charAt(i);
+    const asciiValue = char.charCodeAt(0);
+    console.log(`Character '${char}': ASCII value: ${asciiValue}`);
+    totalASCII += asciiValue;
+  }
+
+  console.log(`The total Ascii value is ${totalASCII}`)
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+String 3
+
+function toProperCase(inputString) {
+    return inputString.toLowerCase().replace(/(^|\s)\S/g, function(match) {
+      return match.toUpperCase();
+    });
+  }
+  
+  const inputString = "convert this string to proper case";
+  const properCaseString = toProperCase(inputString);
+  
+  console.log(properCaseString); 
+
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  String 4
+
+  function sortStringAscending(inputString) {
+    return inputString.split('').sort().join('');
+  }
+  
+  function sortStringDescending(inputString) {
+    return inputString.split('').sort().reverse().join('');
+  }
+  
+  const inputString = "Yashparkar";
+  const ascendingSortedString = sortStringAscending(inputString);
+  const descendingSortedString = sortStringDescending(inputString);
+  
+  console.log("Ascending order:", ascendingSortedString); 
+  console.log("Descending order:", descendingSortedString); 
+  
